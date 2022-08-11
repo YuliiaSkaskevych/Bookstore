@@ -39,6 +39,7 @@ INTERNAL_IPS = [
 # Application definition
 
 INSTALLED_APPS = [
+    'django_celery_beat',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -49,7 +50,6 @@ INSTALLED_APPS = [
     'catalog',
     'debug_toolbar',
     'django_extensions',
-    'django_celery_beat',
 ]
 
 MIDDLEWARE = [
