@@ -21,8 +21,6 @@ django-celery-beat==2.3.0
 django-celery-results==2.4.0
 django-debug-toolbar==3.5.0
 django-extensions==3.2.0
-ipython==8.4.0
-jedi==0.18.1
 kombu==5.2.4
 matplotlib-inline==0.1.3
 mccabe==0.7.0
@@ -58,3 +56,5 @@ django-timezone-field==5.0
 executing==0.9.1
 flake8==5.0.4
 idna==3.3
+ipython==8.4.0
+jedi==0.18.1
