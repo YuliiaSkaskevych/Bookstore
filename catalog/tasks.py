@@ -31,6 +31,8 @@ def add_quotes():
                 author1 = Author.objects.get_or_create(name=author, defaults={'description': description.text})
                 Quote.objects.create(message=i.span.text, author=author1[0])
                 count += 1
+                if count == 5:
+                    break
             if count < 5 or i.span.text in quote_list:
                 next_url = s.find("li", {"class": "next"}).a.get("href")
                 url = url + next_url
