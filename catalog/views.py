@@ -1,3 +1,4 @@
+from django.http import Http404
 from django.shortcuts import render
 from django.views import generic
 
@@ -43,11 +44,11 @@ def quote_list(request):
     page = request.GET.get('page', 1)
     paginator = Paginator(quotes_list, 150)
     try:
-        page_obj = paginator.get_page(page)
+        page_obj = paginator.page(page)
     except PageNotAnInteger:
         page_obj = paginator.page(1)
     except EmptyPage:
-        page_obj = paginator.page(paginator.num_pages)
+        raise Http404
     context = {'page_obj': page_obj}
     return render(request, 'catalog/pagination_quotes.html', context)
 
