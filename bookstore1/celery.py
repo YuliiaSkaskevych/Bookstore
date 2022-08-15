@@ -9,7 +9,7 @@ app.autodiscover_tasks()
 app.conf.beat_schedule = {
     'add_quotes': {
         'task': 'catalog.tasks.add_quotes',
-        'schedule': crontab(hour='1-23/2'),
+        'schedule': crontab(hour='1-23/2', minute=0),
     },
 }
 
