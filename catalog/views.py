@@ -41,7 +41,7 @@ def create_reminder(request):
 def quote_list(request):
     quotes_list = Quote.objects.select_related('author').all()
     page = request.GET.get('page', 1)
-    paginator = Paginator(quotes_list, 100)
+    paginator = Paginator(quotes_list, 150)
     try:
         page_obj = paginator.get_page(page)
     except PageNotAnInteger:
